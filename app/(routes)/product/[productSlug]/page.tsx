@@ -10,13 +10,16 @@ import InfoProduct from "./components/info-product"
 const Page = () => {
 
     const params = useParams()
-    const { productSlug } = params
+    
+    const productSlug = Array.isArray(params.productSlug) 
+      ? params.productSlug[0] 
+      : params.productSlug || ""
 
     const { result }: ResponseType = useGetProductBySlug(productSlug)
 
     console.log(result)
 
-    if(result === null) {
+    if (result === null || result.length === 0) {
       return <SkeletonProduct />
     }
 

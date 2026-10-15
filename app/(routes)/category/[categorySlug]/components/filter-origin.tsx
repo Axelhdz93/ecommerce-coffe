@@ -1,8 +1,7 @@
 import { useGetProductField } from '@/api/getProductField'
 import { Label } from '@/components/ui/label'
-import { RadioGroupItem } from '@/components/ui/radio-group'
+import { RadioGroupItem, RadioGroup } from '@/components/ui/radio-group'
 import { FilterTypes } from '@/types/filters'
-import { RadioGroup } from '@base-ui/react'
 
 type FiltersOriginProps = {
   setFilterOrigin: (origin: string) => void
@@ -12,7 +11,7 @@ const FilterOrigin = (props: FiltersOriginProps) => {
 
     const { setFilterOrigin } = props;
     const { result, loading }: FilterTypes = useGetProductField()
-    console.log(result)
+    
 
   return (
     <div className='my-5' >

@@ -13,10 +13,14 @@ import Aviso from "@/components/aviso"
 
 
 
+
 const Page = () => {
 
   const params = useParams()
-  const { categorySlug } = params
+  
+   const categorySlug = Array.isArray(params.categorySlug) 
+    ? params.categorySlug[0] 
+    : params.categorySlug || ""
   
 
   const { result, loading }: ResponseType = useGetCategoryProduct(categorySlug)
