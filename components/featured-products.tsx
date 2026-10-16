@@ -49,7 +49,7 @@ const FeaturedProducts = () => {
                       <Card className="py-4 border border-gray-200 shadow-none" >
                         <CardContent className="relative flex items-center justify-center px-6 py-2" >
                           <img 
-                              src={`${images[0].url}`} 
+                              src={`${images[0]?.url}`} 
                               alt="Image feature" 
                               className="w-[270px] h-[200px] object-cover object-center group-hover:scale-105 transition-transform duration-300"
                           />
