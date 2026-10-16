@@ -50,7 +50,7 @@ const ProductCard = (props: ProductCardProps) => {
                             className="rounded-xl"
                         />
 
-                        <div className="absolute m-full px-8 transition duration-200 opacity-0 group-hover:opacity-100 bottom-5" >
+                        <div className="absolute w-full px-8 bottom-5 transition duration-200 opacity-100 md:opacity-0 md:group-hover:opacity-100" >
 
                             <div className="flex justify-center gap-x-6">
                                 
